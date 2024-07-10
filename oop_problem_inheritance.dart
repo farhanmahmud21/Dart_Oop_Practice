@@ -1,23 +1,25 @@
 class Father {
   String name;
-  Father(this.name);
+  int age;
+  Father(this.name, this.age);
 
   void introduceSelf() {
-    print('Hi my name is $name ,the father');
+    print('Hi my name is $name ,age- $age, the father');
   }
 }
 
 class Son extends Father {
-  Son(String name) : super(name);
+
+  Son(String name, int age) : super(name, age);
 
   void introduceSelf() {
-    print('Hi my name is $name, the son');
+    print('Hi my name is $name,age- $age, the son');
   }
 }
 
 void main() {
-  Father father = Father("Farhan");
+  Father father = Father("Farhan",25);
   father.introduceSelf();
-  Son son = Son('Soroar');
+  Son son = Son('Soroar', 21);
   son.introduceSelf();
 }
